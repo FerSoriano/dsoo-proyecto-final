@@ -6,26 +6,26 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="301.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuPrincipalController">
+<AnchorPane prefHeight="456.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuPrincipalController">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="454.0" stroke="BLACK" strokeType="INSIDE" width="924.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="95.0" stroke="BLACK" strokeType="INSIDE" width="924.0" />
-        <Label layoutX="339.0" layoutY="31.0" prefHeight="33.0" prefWidth="248.0" text="Abarrotes El Inge 🍺" textFill="#333333">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="454.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="390.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="95.0" stroke="BLACK" strokeType="INSIDE" width="390.0" />
+        <Label layoutX="82.0" layoutY="31.0" prefHeight="33.0" prefWidth="248.0" text="Abarrotes El Inge 🍺" textFill="#333333">
             <font>
                 <Font size="27.0" />
             </font>
         </Label>
-        <Button fx:id="btnAdmin" layoutX="400.0" layoutY="153.0" mnemonicParsing="false" onAction="#mostrarMenuAdmin" prefHeight="52.0" prefWidth="124.0" style="-fx-background-color: #2196F3;" text="Administrador" textFill="WHITE">
+        <Button fx:id="btnAdmin" layoutX="133.0" layoutY="132.0" mnemonicParsing="false" onAction="#mostrarMenuAdmin" prefHeight="52.0" prefWidth="124.0" style="-fx-background-color: #2196F3;" text="Administrador" textFill="WHITE">
             <font>
                 <Font size="16.0" />
             </font>
         </Button>
-        <Button fx:id="btnVentas" layoutX="400.0" layoutY="248.0" mnemonicParsing="false" onAction="#mostrarMenuVentas" prefHeight="52.0" prefWidth="124.0" style="-fx-background-color: #2196F3;" text="Ventas" textFill="WHITE">
+        <Button fx:id="btnVentas" layoutX="133.0" layoutY="227.0" mnemonicParsing="false" onAction="#mostrarMenuVentas" prefHeight="52.0" prefWidth="124.0" style="-fx-background-color: #2196F3;" text="Ventas" textFill="WHITE">
             <font>
                 <Font size="16.0" />
             </font>
         </Button>
-        <Button fx:id="btnSalir" layoutX="401.0" layoutY="350.0" mnemonicParsing="false" onAction="#salirSistema" prefHeight="52.0" prefWidth="124.0" style="-fx-background-color: #F44336;" text="Salir" textFill="WHITE">
+        <Button fx:id="btnSalir" layoutX="133.0" layoutY="321.0" mnemonicParsing="false" onAction="#salirSistema" prefHeight="52.0" prefWidth="124.0" style="-fx-background-color: #F44336;" text="Salir" textFill="WHITE">
             <font>
                 <Font size="16.0" />
             </font>

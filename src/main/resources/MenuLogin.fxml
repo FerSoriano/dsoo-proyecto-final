@@ -20,8 +20,8 @@
       <Label layoutX="211.0" layoutY="146.0" text="Usuario" />
       <TextField fx:id="txtUsuario" layoutX="274.0" layoutY="142.0" prefHeight="26.0" prefWidth="226.0" promptText="user" />
       <Label layoutX="201.0" layoutY="203.0" text="Contraseña" />
-      <Button fx:id="btnIniciarSesion" layoutX="245.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #2196F3;" text="Iniciar Sesión" textFill="WHITE" />
-      <Button fx:id="btnRegresar" layoutX="379.0" layoutY="279.0" mnemonicParsing="false" onAction="#regresar" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #333333;" text="Regresar" textFill="WHITE" />
+      <Button fx:id="btnIniciarSesion" layoutX="377.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #2196F3;" text="Iniciar Sesión" textFill="WHITE" />
+      <Button fx:id="btnRegresar" layoutX="245.0" layoutY="279.0" mnemonicParsing="false" onAction="#regresar" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #333333;" text="Regresar" textFill="WHITE" />
       <PasswordField fx:id="txtPassword" layoutX="274.0" layoutY="199.0" prefHeight="25.0" prefWidth="226.0" promptText="contraseña" />
    </children>
 </AnchorPane>

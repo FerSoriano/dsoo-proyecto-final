@@ -7,8 +7,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
+import model.Inventario;
 import model.Login;
+
 import utils.Paths;
 
 public class App extends Application {
@@ -16,6 +19,7 @@ public class App extends Application {
     private Stage stageWindow;
 
     public static Login login = new Login("admin", "admin"); // todo: meterlo en un archivo o .env
+    public Inventario inventario = new Inventario();
 
     public static void main(String[] args) {
         launch();

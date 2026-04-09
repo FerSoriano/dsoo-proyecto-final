@@ -6,19 +6,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="366.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuAdminController">
+<AnchorPane prefHeight="426.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuAdminController">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
-        <Text fill="WHITE" layoutX="275.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN 🖥️" wrappingWidth="208.52099609375">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+        <Text fill="WHITE" layoutX="146.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN 🖥️" textAlignment="CENTER" wrappingWidth="208.52099609375">
             <font>
                 <Font name="Roboto Mono for Powerline" size="40.0" />
             </font>
         </Text>
-<!--        <Label layoutX="211.0" layoutY="146.0" text="Usuario" />-->
-<!--        <TextField fx:id="txtUsuario" layoutX="274.0" layoutY="142.0" prefHeight="26.0" prefWidth="226.0" promptText="user" />-->
-<!--        <Label layoutX="201.0" layoutY="203.0" text="Contraseña" />-->
-<!--        <TextField fx:id="txtPassword" layoutX="274.0" layoutY="198.0" prefHeight="26.0" prefWidth="226.0" promptText="contraseña" />-->
-<!--        <Button fx:id="btnIniciarSesion" layoutX="245.0" layoutY="279.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #2196F3;" text="Iniciar Sesión" textFill="WHITE" />-->
-        <Button fx:id="btnRegresar" layoutX="379.0" layoutY="279.0" mnemonicParsing="false" onAction="#regresar" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #333333;" text="Regresar" textFill="WHITE" />
+      <Button fx:id="btnAdminProductos" layoutX="177.0" layoutY="129.0" mnemonicParsing="false" onAction="#adminProductos" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #A1A1A1;" text="Administrar Productos" textFill="WHITE" />
+      <Button fx:id="btnCorteCaja" layoutX="177.0" layoutY="196.0" mnemonicParsing="false" onAction="#mostrarCorteCajaGeneral" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #21BCFF;" text="Corte de Caja General" textFill="WHITE" />
+      <Button fx:id="btnAdminUsuarios" layoutX="180.0" layoutY="267.0" mnemonicParsing="false" onAction="#adminUsuarios" prefHeight="39.0" prefWidth="144.0" style="-fx-background-color: #31D492;" text="Administrar Usuarios" textFill="WHITE" />
+      <Button fx:id="btnRegresar" layoutX="271.0" layoutY="349.0" mnemonicParsing="false" onAction="#regresar" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #333333;" text="Regresar" textFill="WHITE" />
+      <Button fx:id="btnCerrarSesion" layoutX="134.0" layoutY="349.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #FF637E;" text="Cerrar Sesión" textFill="WHITE" />
     </children>
 </AnchorPane>

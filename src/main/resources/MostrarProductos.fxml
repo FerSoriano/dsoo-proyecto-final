@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MostrarProductosController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="95.0" stroke="BLACK" strokeType="INSIDE" width="665.0" />
+        <Label layoutX="206.0" layoutY="29.0" text="PRODUCTOS 🛒" textFill="#f2f2f2">
+            <font>
+                <Font name="Roboto Mono for Powerline" size="36.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="btnRegresar" layoutX="513.0" layoutY="31.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #636363;" text="Regresar" textFill="WHITE" underline="true" />
+        <Button fx:id="btnCrearProducto" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" onAction="#irACrearProducto" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #4CAF50;" text="Crear Producto" textFill="WHITE" underline="true" />
+
+        <Label layoutX="74.0" layoutY="144.0" prefHeight="26.0" prefWidth="72.0" text="Buscar por:" />
+        <ChoiceBox fx:id="ddBuscarPor" layoutX="151.0" layoutY="144.0" prefHeight="26.0" prefWidth="117.0" />
+
+        <Label fx:id="lblNombreBuscar" layoutX="74.0" layoutY="209.0" prefHeight="26.0" prefWidth="58.0" text="Nombre" visible="false" />
+        <TextField fx:id="txtNombreBuscar" layoutX="151.0" layoutY="209.0" prefHeight="26.0" prefWidth="117.0" promptText="nombre del producto" visible="false" />
+
+        <Label fx:id="lblIDBuscar" layoutX="74.0" layoutY="209.0" prefHeight="26.0" prefWidth="58.0" text="ID" visible="false" />
+        <TextField fx:id="txtIDBuscar" layoutX="151.0" layoutY="209.0" prefHeight="26.0" prefWidth="117.0" promptText="ID producto" visible="false" />
+
+        <Button fx:id="btnBuscarProducto" layoutX="505.0" layoutY="141.0" mnemonicParsing="false" onAction="#buscarProducto" prefHeight="33.0" prefWidth="127.0" style="-fx-background-color: #4CAF50;" text="Buscar" textFill="WHITE" />
+        <Button fx:id="btnModificarProducto" layoutX="505.0" layoutY="194.0" mnemonicParsing="false" onAction="#modificarProducto" prefHeight="33.0" prefWidth="127.0" style="-fx-background-color: #FF9800;" text="Modificar Producto" textFill="WHITE" visible="false" />
+        <Button fx:id="btnEliminarProducto" layoutX="507.0" layoutY="247.0" mnemonicParsing="false" onAction="#eliminarProducto" prefHeight="33.0" prefWidth="127.0" style="-fx-background-color: #F44336;" text="Dar de baja" textFill="WHITE" visible="false" />
+
+        <Label fx:id="lblID" layoutX="196.0" layoutY="260.0" prefHeight="17.0" prefWidth="50.0" text="ID" visible="false" />
+        <TextField fx:id="txtID" disable="true" layoutX="265.0" layoutY="255.0" prefHeight="26.0" prefWidth="162.0" promptText="ID" visible="false" />
+
+        <Label fx:id="lblNombre" layoutX="196.0" layoutY="295.0" prefHeight="17.0" prefWidth="50.0" text="Nombre" visible="false" />
+        <TextField fx:id="txtNombre" layoutX="265.0" layoutY="290.0" prefHeight="26.0" prefWidth="162.0" promptText="nombre producto" visible="false" />
+
+        <Label fx:id="lblPrecioCompra" layoutX="166.0" layoutY="330.0" prefHeight="17.0" prefWidth="90.0" text="Precio Compra" visible="false" />
+        <TextField fx:id="txtPrecioCompra" layoutX="265.0" layoutY="325.0" prefHeight="26.0" prefWidth="162.0" promptText="0.00" visible="false" />
+
+        <Label fx:id="lblPrecioVenta" layoutX="166.0" layoutY="365.0" prefHeight="17.0" prefWidth="90.0" text="Precio Venta" visible="false" />
+        <TextField fx:id="txtPrecioVenta" layoutX="265.0" layoutY="360.0" prefHeight="26.0" prefWidth="162.0" promptText="0.00" visible="false" />
+
+        <Label fx:id="lblExistencias" layoutX="186.0" layoutY="400.0" prefHeight="17.0" prefWidth="70.0" text="Existencias" visible="false" />
+        <TextField fx:id="txtExistencias" layoutX="265.0" layoutY="395.0" prefHeight="26.0" prefWidth="162.0" promptText="cantidad" visible="false" />
+
+        <Label fx:id="lblNivelReorden" layoutX="166.0" layoutY="435.0" prefHeight="17.0" prefWidth="90.0" text="Nivel Reorden" visible="false" />
+        <TextField fx:id="txtNivelReorden" layoutX="265.0" layoutY="430.0" prefHeight="26.0" prefWidth="162.0" promptText="cantidad mínima" visible="false" />
+
+        <TableView fx:id="tblProductos" layoutX="40.0" layoutY="480.0" prefHeight="280.0" prefWidth="610.0">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="40.0" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="150.0" text="Nombre Producto" />
+                <TableColumn fx:id="colPrecioCompra" prefWidth="100.0" text="Precio Compra" />
+                <TableColumn fx:id="colPrecioVenta" prefWidth="100.0" text="Precio Venta" />
+                <TableColumn fx:id="colExistencias" prefWidth="80.0" text="Existencias" />
+                <TableColumn fx:id="colNivelReorden" prefWidth="80.0" text="Reorden" />
+                <TableColumn fx:id="colNecesitaReorden" prefWidth="60.0" text="Aviso" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
