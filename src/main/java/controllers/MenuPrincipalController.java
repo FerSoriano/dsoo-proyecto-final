@@ -24,7 +24,7 @@ public class MenuPrincipalController {
     @FXML
     void mostrarMenuAdmin(ActionEvent event) {
         System.out.println("Mostrando Menu Admin");
-        if (!App.login.isLogged()) {
+        if (!App.admin.isLogged()) {
             App.app.setScene(Paths.MENU_LOGIN);
         } else {
             App.app.setScene(Paths.MENU_ADMIN);

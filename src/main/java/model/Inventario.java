@@ -33,4 +33,22 @@ public class Inventario {
         }
         return productosActivos;
     }
+
+    public boolean existeProducto(String nombre) {
+        for (Producto p : listaProductos) {
+            if (p.getNombre().equalsIgnoreCase(nombre)) return true;
+        }
+        return false;
+    }
+
+    public Producto obtenerProductoPorNombre(String nombre) {
+        for (Producto p : listaProductos) {
+            if (p.getNombre().equalsIgnoreCase(nombre)) return p;
+        }
+        return null;
+    }
+
+    public void agregarProducto(Producto p) {
+        this.listaProductos.add(p);
+    }
 }

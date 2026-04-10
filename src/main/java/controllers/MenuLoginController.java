@@ -24,12 +24,12 @@ public class MenuLoginController {
 
     @FXML
     void login(ActionEvent event) {
-        if (App.login.validarCredenciales(txtUsuario.getText(), txtPassword.getText())) {
+        if (App.admin.validarCredenciales(txtUsuario.getText(), txtPassword.getText())) {
             System.out.println("Iniciando sesion...");
-            App.login.setLogged(true);
+            App.admin.setLogged(true);
             App.app.setScene(Paths.MENU_ADMIN);
         } else {
-            App.login.setLogged(false);
+            App.admin.setLogged(false);
             Alertas.mostarError("CREDENCIALES INVALIDAS", "Usuario o Contraseña incorrectos. Intenta de nuevo");
         }
     }

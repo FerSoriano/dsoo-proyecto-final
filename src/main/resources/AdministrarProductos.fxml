@@ -20,7 +20,7 @@
         </Label>
 
         <Button fx:id="btnRegresar" layoutX="513.0" layoutY="31.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #636363;" text="Regresar" textFill="WHITE" underline="true" />
-        <Button fx:id="btnAltaProducto" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" onAction="#altaProducto" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #4CAF50;" text="Crear Producto" textFill="WHITE" underline="true" />
+        <Button fx:id="btnAltaProducto" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" onAction="#altaProducto" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #4CAF50;" text="Alta Producto" textFill="WHITE" underline="true" />
 
         <Label layoutX="74.0" layoutY="144.0" prefHeight="26.0" prefWidth="72.0" text="Buscar por:" />
         <ChoiceBox fx:id="ddBuscarPor" layoutX="151.0" layoutY="144.0" prefHeight="26.0" prefWidth="117.0" />

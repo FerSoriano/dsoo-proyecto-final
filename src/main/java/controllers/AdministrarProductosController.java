@@ -303,7 +303,7 @@ public class AdministrarProductosController implements Initializable {
 
     @FXML
     void altaProducto(ActionEvent event) {
-        // App.app.setScene(Paths.CREAR_PRODUCTO);
+         App.app.setScene(Paths.ALTA_PRODUCTO);
     }
 
     @FXML

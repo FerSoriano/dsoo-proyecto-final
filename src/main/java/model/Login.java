@@ -3,7 +3,7 @@ package model;
 public class Login {
     private String user;
     private String password;
-    private boolean isLogged = false;
+    private boolean isLogged = true; //false;
 
     public Login(String user, String password) {
         this.user = user;
