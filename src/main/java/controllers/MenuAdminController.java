@@ -30,8 +30,7 @@ public class MenuAdminController {
 
     @FXML
     void adminUsuarios(ActionEvent event) {
-        System.out.println("TODO: Administrar Usuarios");
-//        App.app.setScene(Paths.ADMIN_USUARIOS);
+        App.app.setScene(Paths.ADMINISTRAR_USUARIOS);
     }
 
     @FXML
@@ -42,7 +41,7 @@ public class MenuAdminController {
 
     @FXML
     void cerrarSesion(ActionEvent event) {
-        App.admin.setLogged(false);
+        App.app.sesionActual.cerrarSesion();
         App.app.setScene(Paths.MENU_PRINCIPAL);
     }
 

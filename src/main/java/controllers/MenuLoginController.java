@@ -24,13 +24,31 @@ public class MenuLoginController {
 
     @FXML
     void login(ActionEvent event) {
-        if (App.admin.validarCredenciales(txtUsuario.getText(), txtPassword.getText())) {
-            System.out.println("Iniciando sesion...");
-            App.admin.setLogged(true);
-            App.app.setScene(Paths.MENU_ADMIN);
+
+        boolean loginExitoso = App.app.sesionActual.iniciarSesion(
+                txtUsuario.getText(),
+                txtPassword.getText(),
+                App.app.gestorUsuarios.getListaUsuarios()
+        );
+
+        if (loginExitoso) {
+            String rolUsuario = App.app.sesionActual.getUsuarioActual().getRol();
+
+            if (rolUsuario.equalsIgnoreCase(App.app.moduloDestino)) {
+
+                if (App.app.moduloDestino.equals("ADMIN")) {
+                    App.app.setScene(Paths.MENU_ADMIN);
+                } else if (App.app.moduloDestino.equals("VENDEDOR")) {
+                    App.app.setScene(Paths.MENU_VENTAS);
+                }
+
+            } else {
+                Alertas.mostarError("ACCESO DENEGADO", "Tu usuario es tipo " + rolUsuario + " y no tienes permisos para acceder a este módulo.");
+                App.app.sesionActual.cerrarSesion();
+            }
+
         } else {
-            App.admin.setLogged(false);
-            Alertas.mostarError("CREDENCIALES INVALIDAS", "Usuario o Contraseña incorrectos. Intenta de nuevo");
+            Alertas.mostarError("CREDENCIALES INVÁLIDAS", "Usuario o Contraseña incorrectos o usuario inactivo.");
         }
     }
 

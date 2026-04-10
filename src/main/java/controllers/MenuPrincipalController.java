@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+
 import utils.Paths;
 import utils.Alertas;
 import java.util.Optional;
@@ -24,17 +25,27 @@ public class MenuPrincipalController {
     @FXML
     void mostrarMenuAdmin(ActionEvent event) {
         System.out.println("Mostrando Menu Admin");
-        if (!App.admin.isLogged()) {
-            App.app.setScene(Paths.MENU_LOGIN);
-        } else {
+
+        if (App.app.sesionActual.isLogged() && App.app.sesionActual.getUsuarioActual().getRol().equalsIgnoreCase("admin")) {
             App.app.setScene(Paths.MENU_ADMIN);
+        } else {
+            App.app.moduloDestino = "ADMIN";
+            App.app.setScene(Paths.MENU_LOGIN);
         }
+
     }
 
     @FXML
     void mostrarMenuVentas(ActionEvent event) {
         System.out.println("Mostrando Menu Ventas");
-        App.app.setScene(Paths.MENU_VENTAS);
+
+        if (App.app.sesionActual.isLogged() && App.app.sesionActual.getUsuarioActual().getRol().equalsIgnoreCase("vendedor")) {
+            App.app.setScene(Paths.MENU_VENTAS);
+        } else {
+            App.app.moduloDestino = "VENDEDOR";
+            App.app.setScene(Paths.MENU_LOGIN);
+        }
+
     }
 
     @FXML

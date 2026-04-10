@@ -9,7 +9,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 import model.Inventario;
-import model.Login;
+import model.GestorUsuarios;
+import model.Sesion;
 
 import utils.Paths;
 
@@ -17,8 +18,11 @@ public class App extends Application {
     public static App app;
     private Stage stageWindow;
 
-    public static Login admin = new Login("admin", "admin"); // todo: meterlo en un archivo o .env
     public Inventario inventario = new Inventario();
+    public GestorUsuarios gestorUsuarios = new GestorUsuarios();
+    public Sesion sesionActual = new Sesion();
+
+    public String moduloDestino;
 
     public static void main(String[] args) {
         launch();
