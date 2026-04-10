@@ -15,13 +15,13 @@ import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class MostrarProductosController implements Initializable {
+public class AdministrarProductosController implements Initializable {
 
     private Producto productoTemp = null;
 
     // Botones
     @FXML private Button btnBuscarProducto;
-    @FXML private Button btnCrearProducto;
+    @FXML private Button btnAltaProducto;
     @FXML private Button btnEliminarProducto;
     @FXML private Button btnModificarProducto;
     @FXML private Button btnRegresar;
@@ -302,7 +302,7 @@ public class MostrarProductosController implements Initializable {
     }
 
     @FXML
-    void irACrearProducto(ActionEvent event) {
+    void altaProducto(ActionEvent event) {
         // App.app.setScene(Paths.CREAR_PRODUCTO);
     }
 
