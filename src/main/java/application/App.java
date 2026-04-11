@@ -7,11 +7,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import model.Inventario;
 import model.GestorUsuarios;
 import model.Sesion;
 
+import model.Venta;
 import utils.Paths;
 
 public class App extends Application {
@@ -20,6 +22,8 @@ public class App extends Application {
 
     public Inventario inventario = new Inventario();
     public GestorUsuarios gestorUsuarios = new GestorUsuarios();
+    public ArrayList<Venta> historialVentas = new ArrayList<>();
+
     public Sesion sesionActual = new Sesion();
 
     public String moduloDestino;

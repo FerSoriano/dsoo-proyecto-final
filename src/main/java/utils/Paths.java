@@ -13,9 +13,6 @@ public class Paths {
     public static final String ADMINISTRAR_USUARIOS = "/AdministrarUsuarios.fxml";
     public static final String ALTA_USUARIO = "/AltaUsuario.fxml";
 
-
-
-    public static final String CORTE_CAJA = "/CorteCajaGeneral.fxml";
-//
     public static final String MENU_VENTAS = "/MenuVentas.fxml";
+    public static final String CORTE_CAJA = "/CorteCajaGeneral.fxml";
 }

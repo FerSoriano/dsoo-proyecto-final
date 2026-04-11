@@ -1,16 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.MenuVentasController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuVentasController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2196F3" height="80.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+        <Label layoutX="30.0" layoutY="18.0" text="PUNTO DE VENTA 🛒" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblCajero" layoutX="650.0" layoutY="30.0" text="Cajero: " textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
 
-    <Button fx:id="btnRegresar" layoutX="513.0" layoutY="31.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: #636363;" text="Regresar" textFill="WHITE" underline="true" />
+        <Button layoutX="780.0" layoutY="24.0" mnemonicParsing="false" onAction="#cerrarSesion" style="-fx-background-color: #F44336;" text="Cerrar Sesión" textFill="WHITE" />
 
+        <Label layoutX="30.0" layoutY="100.0" text="Buscar Producto:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtBuscar" layoutX="150.0" layoutY="97.0" onKeyReleased="#filtrarProductos" prefHeight="26.0" prefWidth="250.0" promptText="Escribe el nombre..." />
+
+        <TableView fx:id="tblCatalogo" layoutX="30.0" layoutY="135.0" prefHeight="480.0" prefWidth="420.0">
+            <columns>
+                <TableColumn fx:id="colCatNombre" prefWidth="220.0" text="Producto" />
+                <TableColumn fx:id="colCatPrecio" prefWidth="100.0" text="Precio" />
+                <TableColumn fx:id="colCatStock" prefWidth="80.0" text="Stock" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="460.0" layoutY="320.0" mnemonicParsing="false" onAction="#agregarAlCarrito" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #4CAF50;" text="&gt;&gt;" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Button>
+
+        <Label layoutX="520.0" layoutY="100.0" text="Carrito de Compras / Ticket:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblCarrito" layoutX="520.0" layoutY="135.0" prefHeight="350.0" prefWidth="350.0">
+            <columns>
+                <TableColumn fx:id="colCarNombre" prefWidth="170.0" text="Producto" />
+                <TableColumn fx:id="colCarCant" prefWidth="60.0" text="Cant." />
+                <TableColumn fx:id="colCarSubtotal" prefWidth="100.0" text="Subtotal" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="520.0" layoutY="495.0" mnemonicParsing="false" onAction="#restarDelCarrito" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: #2196F3;" text="-1" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="575.0" layoutY="495.0" mnemonicParsing="false" onAction="#quitarDelCarrito" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #FF9800;" text="Quitar Seleccionado" textFill="WHITE" />
+        <Button layoutX="760.0" layoutY="495.0" mnemonicParsing="false" onAction="#vaciarCarrito" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #9E9E9E;" text="Vaciar Todo" textFill="WHITE" />
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#eeeeee" height="70.0" layoutX="520.0" layoutY="545.0" stroke="#cccccc" strokeType="INSIDE" width="350.0" />
+        <Label layoutX="534.0" layoutY="565.0" text="TOTAL:">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblTotal" layoutX="624.0" layoutY="565.0" text="\$0.00" textFill="#2e7d32">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+
+        <Button layoutX="750.0" layoutY="560.0" mnemonicParsing="false" onAction="#cobrar" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #2e7d32;" text="COBRAR" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Button>
+    </children>
 </AnchorPane>

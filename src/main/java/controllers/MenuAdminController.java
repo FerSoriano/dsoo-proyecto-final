@@ -35,8 +35,7 @@ public class MenuAdminController {
 
     @FXML
     void mostrarCorteCajaGeneral(ActionEvent event) {
-        System.out.println("TODO: Corte de caja");
-        //        App.app.setScene(Paths.CORTE_CAJA);
+        App.app.setScene(Paths.CORTE_CAJA);
     }
 
     @FXML

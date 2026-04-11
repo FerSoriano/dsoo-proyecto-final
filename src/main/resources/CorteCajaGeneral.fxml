@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CorteCajaGeneralController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3F51B5" height="80.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+        <Label layoutX="30.0" layoutY="18.0" text="CORTE DE CAJA GENERAL 📊" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+
+        <Button layoutX="580.0" layoutY="24.0" mnemonicParsing="false" onAction="#regresarMenuAdmin" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #9E9E9E;" text="Regresar" textFill="WHITE" />
+
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#E8EAF6" height="80.0" layoutX="30.0" layoutY="100.0" stroke="#C5CAE9" strokeType="INSIDE" width="310.0" />
+        <Label layoutX="50.0" layoutY="110.0" text="Total de Ventas Realizadas:" textFill="#3f51b5">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblCantidadVentas" layoutX="50.0" layoutY="135.0" text="0" textFill="#1a237e">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+
+        <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#E8F5E9" height="80.0" layoutX="360.0" layoutY="100.0" stroke="#C8E6C9" strokeType="INSIDE" width="310.0" />
+        <Label layoutX="380.0" layoutY="110.0" text="Ingreso Total del Día:" textFill="#2e7d32">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblIngresoTotal" layoutX="380.0" layoutY="135.0" text="\$0.00" textFill="#1b5e20">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="30.0" layoutY="205.0" text="Detalle de Transacciones:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="tblHistorial" layoutX="30.0" layoutY="235.0" prefHeight="290.0" prefWidth="640.0">
+            <columns>
+                <TableColumn fx:id="colFecha" prefWidth="200.0" text="Fecha y Hora" />
+                <TableColumn fx:id="colCajero" prefWidth="250.0" text="Cajero que atendió" />
+                <TableColumn fx:id="colTotal" prefWidth="170.0" text="Total de Venta" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="490.0" layoutY="540.0" mnemonicParsing="false" onAction="#cerrarDia" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #D32F2F;" text="Cerrar Día (Limpiar)" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
